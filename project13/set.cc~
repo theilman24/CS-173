@@ -1,0 +1,112 @@
+#include <iostream>
+using namespace std;
+
+
+template<class T>
+Set<T>::Set	(void)
+{  
+}
+
+//===============================================================================
+
+template<class T>
+Set<T>::Set	(const Set & x)	: list(x.list)
+{  
+}
+
+//===============================================================================
+
+
+template<class T>
+Set<T>::~Set(void)
+{  
+}
+
+
+//===============================================================================
+
+template<class T>
+Set<T> &   Set<T>::operator=  (const Set & source)
+{
+	list = source.list;
+	return *this;
+
+}
+
+//===============================================================================
+
+
+
+template<class T>
+void  Set<T>::insert  (const T& x)  
+{
+	int y = list.index(x);
+	if (y == -1)
+		list.append(x);
+	else;  //Don't add anything
+}
+
+//===============================================================================
+
+template<class T>
+T	Set<T>::remove	(const T & x)
+{
+	int y = list.index(x);
+	if (y == -1)
+		throw IndexError();
+	else
+		list.pop(y);
+
+}
+
+//===============================================================================
+
+template<class T>
+bool  Set<T>::contains	(const T &x )
+{
+	int y = list.index(x);
+	if (y== -1)
+		return false;
+	else
+		return true;
+}
+
+
+//==============================================================================
+template<class T>
+Set<T>::operator+ 	
+{
+	s3 = s1;
+	int y = size.(s3);
+	for(i=0; i< y; i++)
+	{
+		
+	}
+		
+}
+
+
+//==============================================================================
+
+
+template<class T>
+Set<T>::operator*	
+{
+	
+}
+
+*/
+//===============================================================================
+
+
+
+template<class T>
+int	Set<T>::size  	(void) const	
+{
+	return list.length();
+}
+
+
+
+
+

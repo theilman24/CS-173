@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+#ifndef SET_H
+#define SET_H
+
+#include "list.h"
+
+template<class T>
+class Set
+{
+private:
+	List<T> 	list;
+public:
+			Set		(void);		
+		   	Set		(const Set & x);				// copy
+			~Set		(void);					// destructor
+Set &      		operator=   	(const Set & source);             // assignment operator
+void       		insert     	(const T & x);          	  // insert an item to the end of the list
+T			remove		(const T & x);
+bool			contains	(const T &x );
+int			size		(void) const;	
+//Set 			operator*	( const Set &x) const;
+Set 			operator+	( const Set &x) const;
+				
+
+friend ostream&    operator<<  (ostream& os, Set & x)
+{ 
+	os << x.list;
+	return os;
+}
+
+};
+
+#endif
+#include "set.cc"
